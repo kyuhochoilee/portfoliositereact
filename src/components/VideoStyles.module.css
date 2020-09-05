@@ -1,0 +1,36 @@
+.infocontainer{
+    margin: 0 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.name {
+    font-size: 1em;
+    margin-bottom: 0;
+
+}
+
+.about {
+    font-size: 0.7em;
+    margin: 0;
+    font-weight: 300;
+
+}
+
+.who {
+    font-size: 0.7em;
+    margin: 0;
+    font-weight: 300;
+
+}
+
+.where {
+    font-size: 0.7em;
+    margin: 0;
+    font-weight: 300;
+
+}
+
+.desc {
+    margin-top: 0.6em;
+}
+

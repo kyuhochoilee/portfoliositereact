@@ -1,14 +1,23 @@
 import React from "react"
 import tabStyles from "./Tab.module.css"
-import "./Music.css"
+import "./Player.css"
 import * as  Amplitude from "amplitudejs"
-import homeMP3 from "../audio/home.mp3"
-import cover1 from "../img/sameoldsong.png"
+
+import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
+import "./Music.css"
+
+SwiperCore.use([EffectCoverflow, Pagination]);
 
 class MusicOriginal extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+    this.myRefs = props.songs.map(() => React.createRef())
+
   }
 
   description() {
@@ -18,84 +27,67 @@ class MusicOriginal extends React.Component {
       </div>
     );
   }
+
   componentDidMount() {
-    Amplitude.init({
-      "songs": [{
-        "name": "home",
-        "artist": "EDEN",
-        "album": "periscope tapes",
-        "url": {homeMP3},
-        "cover_art_url": {cover1}
-      },
-      {
-        "name": "dreaming about you",
-        "artist": "EDEN",
-        "album": "periscope tapes",
-        "url": "../audio/dreamingaboutyou.mp3",
-        "cover_art_url": "../img/sameoldsong.png"
-      },
-      {
-        "name": "Chevalier",
-        "artist": "Daniel Caesar",
-        "album": "Birds of Paradise EP",
-        "url": "../audio/chevalier.mp3",
-        "cover_art_url": "../img/sameoldsong.png"
-      }
+    Amplitude.init({ "songs": this.props.songs })
+  }
 
-      ]
-    });
-    // function onClickProgress(e, currentIndex, self) {
-    //   if (Amplitude.getActiveIndex() == currentIndex) {
-    //     var offset = self.getBoundingClientRect();
-    //     var x = e.pageX - offset.left;
-    //     Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat(self.offsetWidth)) * 100);
-    //   }
-    // }
-    // document.getElementById('song-played-progress-1').addEventListener('click', function (e) {
-    //   onClickProgress(e, 0, this);
-    // });
-    // document.getElementById('song-played-progress-2').addEventListener('click', function (e) {
-    //   onClickProgress(e, 1, this);
-    // });
-    // document.getElementById('song-played-progress-3').addEventListener('click', function (e) {
-    //   onClickProgress(e, 2, this);
-    // });
-
+  onClickProgress(e, currentIndex, ref) {
+    if (Amplitude.getActiveIndex() === currentIndex) {
+      var offset = ref.current.getBoundingClientRect();
+      var x = e.pageX - offset.left;
+      Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat(ref.current.offsetWidth)) * 100);
+    }
   }
   images() {
     return (
       <div>
-        <div className="player">
-          <img src={cover1} className="album-art" />
-          <div className="meta-container">
-            <div className="song-title">home</div>
-            <div className="song-artist">EDEN</div>
+        <Swiper
+          effect={"coverflow"}
+          slidesPerView={'auto'}
+          centeredSlides={'center'}
+          pagination={{ clickable: true }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+          }}
+          preloadImages={"false"}>
+          {
+            this.props.songs.map((song, index) => (
+              <SwiperSlide>
+                <div className="player">
+                  <img src={song["cover_art_url"]} className="album-art" />
+                  <div className="meta-container">
+                    <div className="song-title">{song["name"]}</div>
+                    <div className="song-artist">{song["artist"]}</div>
+                    <progress className="amplitude-song-played-progress" data-amplitude-song-index={index} ref={this.myRefs[index]} onClick={(e) => this.onClickProgress(e, index, this.myRefs[index])}></progress>
+                    <div className="time-container">
+                      <div className="current-time">
+                        <span className="amplitude-current-minutes" data-amplitude-song-index={index}></span>:<span className="amplitude-current-seconds" data-amplitude-song-index={index}></span>
+                      </div>
 
+                      <div className="duration">
+                        <span className="amplitude-duration-minutes" data-amplitude-song-index={index}>3</span>:<span className="amplitude-duration-seconds" data-amplitude-song-index={index}>30</span>
+                      </div>
+                    </div>
+                    <div className="control-container">
+                      <div className="amplitude-play-pause" data-amplitude-song-index={index}>
 
-            <progress className="amplitude-song-played-progress" data-amplitude-song-index="0" id="song-played-progress-1"></progress>
-            <div className="time-container">
-              <div className="current-time">
-                <span className="amplitude-current-minutes" data-amplitude-song-index="0"></span>:<span className="amplitude-current-seconds" data-amplitude-song-index="0"></span>
-              </div>
+                      </div>
 
-              <div className="duration">
-                <span className="amplitude-duration-minutes" data-amplitude-song-index="0">3</span>:<span className="amplitude-duration-seconds" data-amplitude-song-index="0">30</span>
-              </div>
-            </div>
-            <div className="control-container">
-              <div className="amplitude-play-pause" data-amplitude-song-index="0">
-
-              </div>
-
-            </div>
-          </div>
-        </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))
+          }
+        </Swiper>
       </div>
     );
   }
-
-  
-
   render() {
     const element = (this.props.section === "desc") ? this.description() : this.images()
 
