@@ -8,9 +8,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
-import "./Music.css"
+import styles from "./Music.module.css"
+import Resume from "./Resume"
 
 SwiperCore.use([EffectCoverflow, Pagination]);
+
+const resume = [{
+  "title": "Composed and produced a virtual performance by my a cappella group of “We All Belong”, an anthem for the Lexington Public Schools system commissioned by the School Committee.",
+  "extra": []
+},
+{
+  "title": "Wrote, produced, and performed “Give Us a Hand”, a song about climate change awareness for the 2020 Bow Seat Ocean Awareness Contest.",
+  "extra": []
+},
+{
+  "title": "Performed an original song at Lex Vegas, an event that I helped build from scratch as part of the LHS Class of 2021 Class Council that increased our fundraising revenue from $0 to $1500.",
+  "extra": []
+}
+]
 
 class MusicOriginal extends React.Component {
 
@@ -23,7 +38,8 @@ class MusicOriginal extends React.Component {
   description() {
     return (
       <div>
-        <p className={tabStyles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p className={tabStyles.description}>All of the songs below were written, recorded, and produced by me in my bedroom. I use FL Studio 20 to produce my music. </p>
+
       </div>
     );
   }
@@ -42,49 +58,54 @@ class MusicOriginal extends React.Component {
   images() {
     return (
       <div>
-        <Swiper
-          effect={"coverflow"}
-          slidesPerView={'auto'}
-          centeredSlides={'center'}
-          pagination={{ clickable: true }}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true
-          }}
-          preloadImages={"false"}>
-          {
-            this.props.songs.map((song, index) => (
-              <SwiperSlide>
-                <div className="player">
-                  <img src={song["cover_art_url"]} className="album-art" />
-                  <div className="meta-container">
-                    <div className="song-title">{song["name"]}</div>
-                    <div className="song-artist">{song["artist"]}</div>
-                    <progress className="amplitude-song-played-progress" data-amplitude-song-index={index} ref={this.myRefs[index]} onClick={(e) => this.onClickProgress(e, index, this.myRefs[index])}></progress>
-                    <div className="time-container">
-                      <div className="current-time">
-                        <span className="amplitude-current-minutes" data-amplitude-song-index={index}></span>:<span className="amplitude-current-seconds" data-amplitude-song-index={index}></span>
-                      </div>
+        <div className={
+          `${styles['swiper-container-3d']} ${styles['swiper-container']}`}>
+          <Swiper
+            keyboard={{ enabled: true }}
+            effect={"coverflow"}
+            slidesPerView={'auto'}
+            centeredSlides={'center'}
+            pagination={{ clickable: true }}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true
+            }}
+            preloadImages={"false"}>
+            {
+              this.props.songs.map((song, index) => (
+                <SwiperSlide className={styles['swiper-slide']}>
+                  <div className="player">
+                    <img src={song["cover_art_url"]} className="album-art" />
+                    <div className="meta-container">
+                      <div className="song-title">{song["name"]}</div>
+                      <div className="song-artist">{song["artist"]}</div>
+                      <progress className="amplitude-song-played-progress" data-amplitude-song-index={index} ref={this.myRefs[index]} onClick={(e) => this.onClickProgress(e, index, this.myRefs[index])}></progress>
+                      <div className="time-container">
+                        <div className="current-time">
+                          <span className="amplitude-current-minutes" data-amplitude-song-index={index}></span>:<span className="amplitude-current-seconds" data-amplitude-song-index={index}></span>
+                        </div>
 
-                      <div className="duration">
-                        <span className="amplitude-duration-minutes" data-amplitude-song-index={index}>3</span>:<span className="amplitude-duration-seconds" data-amplitude-song-index={index}>30</span>
+                        <div className="duration">
+                          <span className="amplitude-duration-minutes" data-amplitude-song-index={index}>3</span>:<span className="amplitude-duration-seconds" data-amplitude-song-index={index}>30</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="control-container">
-                      <div className="amplitude-play-pause" data-amplitude-song-index={index}>
+                      <div className="control-container">
+                        <div className="amplitude-play-pause" data-amplitude-song-index={index}>
+
+                        </div>
 
                       </div>
-
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))
-          }
-        </Swiper>
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
+        </div>
+        <Resume info={resume}/>
       </div>
     );
   }

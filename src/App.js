@@ -18,7 +18,7 @@ import Design from "./components/Design"
 
 const App = withRouter(({ location }) => (
   <div>
-    {location.pathname !== "/" && <Bar />}
+    {location.pathname !== "/" && <Bar active = {location}/>}
 
     <Switch>
       <Route exact path="/"><Home /></Route>

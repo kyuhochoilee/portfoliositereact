@@ -3,21 +3,19 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useRouteMatch,
-    Outlet,
-    useParams,
-    withRouter
+    Redirect,
+    NavLink
 } from "react-router-dom";
-import MusicIndex from "./MusicIndex"
 import MusicOriginal from "./MusicOriginal"
 import MusicContemporary from "./MusicContemporary"
 import MusicChoir from "./MusicChoir"
 import styles from "./Tab.module.css"
+import musicStyles from "./Music.module.css"
 import homeMP3 from "../audio/home.mp3"
 import dreamingMP3 from "../audio/dreamingaboutyou.mp3"
 import chevalierMP3 from "../audio/chevalier.mp3"
 import cover1 from "../img/sameoldsong.png"
+import "./Shadows.css"
 
 
 const mySongs = [{
@@ -49,8 +47,8 @@ const myContemp = [{
     "about": "Bastille",
     "who": "Lexington High School Rock, Paper, Scissors",
     "where": "",
-    "desc": "In light of the pandemic, i organized, soloed, and edited a virtual performance by my a cappella group.",
-    "url": "https://www.youtube.com/embed/grTHxYK9Gx8",
+    "desc": "In light of the pandemic, I organized, soloed, mixed, mastered, and edited a virtual performance for my a cappella group.",
+    "url": "https://www.youtube.com/embed/grTHxYK9Gx8?start=15",
 },
 {
     "name": "First Date/Last Night",
@@ -58,56 +56,55 @@ const myContemp = [{
     "who": "Duet with assisting performer Hannah Kim",
     "where": "Lexington High School Follies, February 2019",
     "desc": "A live duet performance at LHS of a musical theater piece.",
-    "url": "https://www.youtube.com/embed/IaGVAU5WY68",
+    "url": "https://www.youtube.com/embed/gtoN23AUf7A",
 }
 
 ]
 
 const myChoir = [{
-    "name": "Be for Me the Earth",
-    "about": "Nathan Jones",
+    "name": "Dashing Away With the Smoothing Iron",
+    "about": "John Rutter",
     "who": "Lexington High School Madrigal Singers",
     "where": "WGBH Sing That Thing! Season 5",
-    "desc": "Our championship-winning performance of Be for Me the Earth on WGBH's Sing That Thing!",
-    "url": "https://www.youtube.com/embed/grTHxYK9Gx8",
+    "desc": "Our championship-winning performance on WGBH's Sing That Thing!",
+    "url": "https://www.youtube.com/embed/ZeGc01ZxqfU",
 },
 {
-    "name": "Pied Beauty",
-    "about": "???",
+    "name": "Sügismaastikud: Kanarbik",
+    "about": "Veljo Tormis",
     "who": "Lexington High School Madrigal Singers",
     "where": "Carnegie Hall, January 2019",
     "desc": "Our ensemble was given the incredible honor of performing at Carnegie Hall.",
-    "url": "https://www.youtube.com/embed/grTHxYK9Gx8",
+    "url": "https://www.youtube.com/embed/bRdJC6CuXGY",
 }
 
 ]
 
 export default function Music() {
     return (
-        <Router>
+        <div>
             <div>
                 <div className={styles.layout}>
                     <div className={styles.tab}>
-                        <Link to="/music" className={styles.tablinks}>resumé</Link>
-                        <Link to="/music/original" className={styles.tablinks}>original compositions</Link>
-                        <Link to="/music/contemporary" className={styles.tablinks}>contemporary vocals</Link>
-                        <Link to="/music/choir" className={styles.tablinks}>select choir</Link>
+                        <NavLink to="/music/original" className={styles.tablinks} activeClassName={styles.active}>original compositions</NavLink>
+                        <NavLink to="/music/contemporary" className={styles.tablinks} activeClassName={styles.active}>contemporary vocals</NavLink>
+                        <NavLink to="/music/choir" className={styles.tablinks} activeClassName={styles.active}>select choir</NavLink>
                     </div>
 
                     <Switch>
-                        <Route exact path="/music"><MusicIndex section="desc" /></Route>
+                        <Redirect exact from="/music" to="/music/original" />
                         <Route path="/music/original"><MusicOriginal section="desc" songs={mySongs}/></Route>
                         <Route path="/music/contemporary"><MusicContemporary section="desc" songs={myContemp} /></Route>
                         <Route path="/music/choir"><MusicChoir section="desc" songs={myChoir} /></Route>
                     </Switch>
                 </div>
                 <Switch>
-                    <Route exact path="/music"><MusicIndex section="image" /></Route>
+                    <Redirect exact from="/music" to="/music/original" />
                     <Route path="/music/original"><MusicOriginal section="image" songs={mySongs}/></Route>
                     <Route path="/music/contemporary"><MusicContemporary section="image" songs={myContemp}/></Route>
                     <Route path="/music/choir"><MusicChoir section="image" songs={myChoir}/></Route>
                 </Switch>
             </div>
-        </Router>
+        </div>
     )
 }

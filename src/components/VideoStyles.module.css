@@ -31,6 +31,18 @@
 }
 
 .desc {
+    font-size: 0.9em;
     margin-top: 0.6em;
 }
 
+iframe {
+    width: 450px;
+    height: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    iframe {
+        width: 250px;
+        height: 150px;
+    }
+}

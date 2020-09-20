@@ -59,11 +59,16 @@ body {
     display: none;
 }
 
-.activebar {
+.active {
     color: red;
 }
 
 @media only screen and (max-width:766px) {
+    body {
+        /*    background-color: #fff0f6;*/
+        margin: 0;
+        padding: 0 2em;
+    }
     .navbar {
         flex-direction: column;
         margin-top: 1.5em;

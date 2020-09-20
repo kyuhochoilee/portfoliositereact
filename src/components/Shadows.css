@@ -1,0 +1,16 @@
+.swiper-slide-shadow-left {
+    border-radius: 20px;
+  }
+  
+ .swiper-slide-shadow-right {
+    border-radius: 20px;
+  }
+  .swiper-slide-shadow-active {
+      border-radius: 20px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }

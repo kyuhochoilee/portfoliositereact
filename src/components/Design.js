@@ -4,31 +4,50 @@ import {
     Switch,
     Route,
     Link,
-    useRouteMatch,
-    Outlet,
-    useParams,
-    withRouter
 } from "react-router-dom";
-import DesignIndex from "./DesignIndex"
-import DesignWebsites from "./DesignWebsites"
-import DeisgnGraphics from "./DesignGraphics"
+import DesignGraphics from "./DesignGraphics"
+import styles from "./Design.module.css"
+import Arks from "../img/arks.png"
+import Chois from "../img/choiscrafts.png"
+import Kolex from "../img/kolex.png"
+import Rancs from "../img/rancs.png"
+
+
+
+const myImages = [{
+    "url": Arks,
+    "desc": "Hello this is a short description of the website"
+},
+
+{
+    "url": Chois,
+    "desc": "Hello this is a short description of the website"
+},
+
+{
+    "url": Kolex,
+    "desc": "Hello this is a short description of the website"
+},
+
+{
+    "url": Rancs,
+    "desc": "Hello this is a short description of the website"
+}
+
+]
 
 
 export default function Design() {
     return (
-        <Router>
+        <div>
             <div>
-                <div>
-                    <Link to="/design">resume</Link>
-                    <Link to="/design/websites">websites</Link>
-                    <Link to="/design/graphics">graphics</Link>
-                </div>
-                <Switch>
-                    <Route exact path="/design"><DesignIndex /></Route>
-                    <Route path="/design/websites"><DesignWebsites /></Route>
-                    <Route path="/design/graphics"><DeisgnGraphics /></Route>
-                </Switch>
+                <h1 className={styles.header}>websites</h1>
             </div>
-        </Router>
+            <div>
+                <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <DesignGraphics images={myImages}/>
+        </div>
+
     )
 }

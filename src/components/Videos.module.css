@@ -1,0 +1,30 @@
+.slide {
+    width: 450px;
+    height: 350px;
+    background-color: #ededed;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 450px;
+    height: 350px;
+    background-color: #ededed;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 350px;
+        background-color: #ededed;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5)
+      }
+}

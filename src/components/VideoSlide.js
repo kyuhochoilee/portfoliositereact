@@ -9,7 +9,7 @@ class VideoSlide extends React.Component {
     render() {
         return (
             <div>
-                <iframe width="450" height="200" src={this.props.song.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src={this.props.song.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
                 <div className ={styles.infocontainer}>
                     <h1 className={styles.name}>{this.props.song.name}</h1>
                     <h3 className={styles.about}>{this.props.song.about}</h3>
