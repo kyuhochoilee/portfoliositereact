@@ -45,4 +45,29 @@ iframe {
         width: 250px;
         height: 150px;
     }
+    .about {
+        font-size: 0.6em;
+        margin: 0;
+        font-weight: 300;
+    
+    }
+    
+    .who {
+        font-size: 0.6em;
+        margin: 0;
+        font-weight: 300;
+    
+    }
+    
+    .where {
+        font-size: 0.6em;
+        margin: 0;
+        font-weight: 300;
+    
+    }
+    .desc {
+        font-size: 0.7em;
+        margin-top: 0.6em;
+    }
+
 }
