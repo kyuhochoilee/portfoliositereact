@@ -14,7 +14,7 @@ function Bar(props) {
             <nav className={styles.navbar} id="bar">
                 <NavLink activeClassName={styles.active} className={styles.menuitem} to='/about' title="about">about</NavLink>
                 <NavLink activeClassName={styles.active} className={styles.menuitem} to='/music' title="music">music</NavLink>
-                <NavLink activeClassName={styles.active} className={styles.menuitem} to='/design' title="design">design</NavLink>
+                <NavLink activeClassName={styles.active} className={styles.menuitem} to='/design' title="web">web</NavLink>
             </nav>
         </div>
     )

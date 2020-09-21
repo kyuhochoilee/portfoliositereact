@@ -14,7 +14,7 @@ function Home() {
                 <ul className = {styles.list}>
                     <li><a className = {styles.menuitem} href="/about" title="about">about</a></li>
                     <li><a className = {styles.menuitem} href="/music" title="music">music</a></li>
-                    <li><a className = {styles.menuitem} href="/design" title="design">design</a></li>
+                    <li><a className = {styles.menuitem} href="/design" title="webs">web</a></li>
                 </ul>
             </div>
         </div>
