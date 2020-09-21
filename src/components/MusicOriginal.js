@@ -14,6 +14,10 @@ import Resume from "./Resume"
 SwiperCore.use([EffectCoverflow, Pagination]);
 
 const resume = [{
+  "title": "Developed and ran an Introduction to Music Production master class for other members of the LHS Music Program during quarantine. Over 50 people took part, learning the basics of composition, arrangement, recording, and mixing.",
+  "extra": []
+},
+{
   "title": "Composed and produced a virtual performance by my a cappella group of “We All Belong”, an anthem for the Lexington Public Schools system commissioned by the School Committee.",
   "extra": []
 },
