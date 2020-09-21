@@ -14,7 +14,7 @@ import Resume from "./Resume"
 SwiperCore.use([EffectCoverflow, Pagination]);
 
 const resume = [{
-  "title": "Developed and ran an Introduction to Music Production master class for other members of the LHS Music Program during quarantine. Over 50 people took part, learning the basics of composition, arrangement, recording, and mixing.",
+  "title": "Created and taught an Introduction to Music Production masterclass for other members of the LHS Music Program during quarantine. Over 50 people took part, learning the basics of music theory, composition, arrangement, recording, and mixing in GarageBand.",
   "extra": []
 },
 {
