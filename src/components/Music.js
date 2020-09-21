@@ -13,8 +13,10 @@ import findit from "../audio/findit.mp3"
 import anyways from "../audio/anyways.mp3"
 import isolated from "../audio/isolated.mp3"
 import sameoldsong from "../audio/sameoldsong.mp3"
-
-import cover1 from "../img/sameoldsong.png"
+import cover1 from "../img/findit.png"
+import cover2 from "../img/anyways.png"
+import cover3 from "../img/isolated.png"
+import cover4 from "../img/sameoldsong.png"
 import "./Shadows.css"
 
 
@@ -30,21 +32,21 @@ const mySongs = [{
     "artist": "kyuho",
     "album": "my life",
     "url": anyways,
-    "cover_art_url": cover1
+    "cover_art_url": cover2
 },
 {
     "name": "isolated",
     "artist": "kyuho",
     "album": "my life",
     "url": isolated,
-    "cover_art_url": cover1
+    "cover_art_url": cover3
 },
 {
     "name": "same old song",
     "artist": "kyuho",
     "album": "my life",
     "url": sameoldsong,
-    "cover_art_url": cover1
+    "cover_art_url": cover4
 }
 
 ]
