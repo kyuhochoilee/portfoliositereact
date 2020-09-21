@@ -9,32 +9,41 @@ import MusicOriginal from "./MusicOriginal"
 import MusicContemporary from "./MusicContemporary"
 import MusicChoir from "./MusicChoir"
 import styles from "./Tab.module.css"
-import homeMP3 from "../audio/home.mp3"
-import dreamingMP3 from "../audio/dreamingaboutyou.mp3"
-import chevalierMP3 from "../audio/chevalier.mp3"
+import findit from "../audio/findit.mp3"
+import anyways from "../audio/anyways.mp3"
+import isolated from "../audio/isolated.mp3"
+import sameoldsong from "../audio/sameoldsong.mp3"
+
 import cover1 from "../img/sameoldsong.png"
 import "./Shadows.css"
 
 
 const mySongs = [{
-    "name": "home",
-    "artist": "EDEN",
-    "album": "periscope tapes",
-    "url": homeMP3,
+    "name": "find it",
+    "artist": "kyuho",
+    "album": "my life",
+    "url": findit,
     "cover_art_url": cover1
 },
 {
-    "name": "dreaming about you",
-    "artist": "EDEN",
-    "album": "periscope tapes",
-    "url": dreamingMP3,
+    "name": "anyways",
+    "artist": "kyuho",
+    "album": "my life",
+    "url": anyways,
     "cover_art_url": cover1
 },
 {
-    "name": "Chevalier",
-    "artist": "Daniel Caesar",
-    "album": "Birds of Paradise EP",
-    "url": chevalierMP3,
+    "name": "isolated",
+    "artist": "kyuho",
+    "album": "my life",
+    "url": isolated,
+    "cover_art_url": cover1
+},
+{
+    "name": "same old song",
+    "artist": "kyuho",
+    "album": "my life",
+    "url": sameoldsong,
     "cover_art_url": cover1
 }
 
