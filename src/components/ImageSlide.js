@@ -9,8 +9,10 @@ class VideoSlide extends React.Component {
     render() {
         return (
             <div className={styles.container}>
-                <img className={styles.image} src={this.props.image.url} width="600" height="300"/>
+                <img className={styles.image} src={this.props.image.url} />
+                <a className={styles.title} href={this.props.image.link}>{this.props.image.title}</a>
                 <p className={styles.desc}>{this.props.image.desc}</p>
+
             </div>
         )
     }

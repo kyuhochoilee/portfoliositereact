@@ -42,8 +42,8 @@ class MusicContemporary extends React.Component {
   description() {
     return (
       <div>
-        <p className={tabStyles.description}>I have performed a great variety of amazing repertoire in my time with Lexington High School’s premier honors choir, Madrigal Singers.<br></br><br></br>  I’ve also performed with the Massachusetts All-State Chorus at Boston's Symphony Hall, and with the Lexington High School Honors Concert Choir on a tour across Greece and Bulgaria.
-Below are my favorite performances!</p>
+        <p className={tabStyles.description}>I have performed a great variety of amazing repertoire in my time with Lexington High School’s premier honors choir, Madrigal Singers. I’ve also performed with the Massachusetts All-State Chorus at Boston's Symphony Hall, and with the Lexington High School Honors Concert Choir on a tour across Greece and Bulgaria.
+Below are my favorite performances, as well as my detailed resumé!</p>
       </div>
     );
   }
@@ -63,6 +63,7 @@ Below are my favorite performances!</p>
             modifier: 1,
             slideShadows: true
           }}
+          grabCursor={"true"}
           preloadImages={"false"}>
 
           {

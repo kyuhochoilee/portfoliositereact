@@ -38,7 +38,7 @@ class MusicOriginal extends React.Component {
   description() {
     return (
       <div>
-        <p className={tabStyles.description}>All of the songs below were written, recorded, and produced by me in my bedroom. I use FL Studio 20 to produce my music. </p>
+        <p className={tabStyles.description}>All of the songs below were written, recorded, and produced by me in my bedroom. I use FL Studio 20 to produce my music. Below are a few of my favorite songs that I've produced, as well as a short resumé!</p>
 
       </div>
     );
@@ -73,6 +73,7 @@ class MusicOriginal extends React.Component {
               modifier: 1,
               slideShadows: true
             }}
+            grabCursor={"true"}
             preloadImages={"false"}>
             {
               this.props.songs.map((song, index) => (

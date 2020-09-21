@@ -12,10 +12,6 @@ html, body {
 
 .wrapper {
     max-width: 50%;
-    /* background-color: whitesmoke; */
-    /* border-radius: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    padding: 4em; */
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -23,6 +19,7 @@ html, body {
     display: flex;
     justify-content: center;
     margin: auto;
+    
 }
 
 .blurb {
@@ -57,4 +54,20 @@ html, body {
 .text {
     color: #636363;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+    .hey {
+        width: 90%;
+        height: 90%;
+    }
+    .wrapper {
+        max-width: 80%;
+        margin: 3em 0;
+
+    }
+
+    .blurb {
+        font-size: 1em;
+    }
 }

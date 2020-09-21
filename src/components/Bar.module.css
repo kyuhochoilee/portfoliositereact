@@ -70,34 +70,29 @@ body {
         padding: 0 2em;
     }
     .navbar {
-        flex-direction: column;
-        margin-top: 1.5em;
-        padding: 2em;
-        display: none;
+        flex-direction: row;
+        margin-top: 1em;
+        padding: 1em;
     }
     .fullbar {
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
+        border-bottom: 1px solid black;
+        padding: 0;
     }
     .menuitem {
-        padding: 0.5em 5em;
-    }
-    .active {
         display: flex;
         align-items: center;
-        border-top: 2px solid black;
         width: 100%;
+        margin: 0 .5em;
+        font-size: 20px;
+
+    }
+    .active {
+        
     }
     .logo {
         margin: 1.4em auto -1em;
-    }
-    .navbar-toggle {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size: 24px;
-        padding: 1em;
     }
 }

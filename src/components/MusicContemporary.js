@@ -41,7 +41,7 @@ class MusicContemporary extends React.Component {
   description() {
     return (
       <div>
-        <p className={tabStyles.description}>I often perform contemporary music, whether it be pop songs with my a cappella group, Rock, Paper, Scissors, or music theater repertoire at Lexington High School concerts.</p>
+        <p className={tabStyles.description}>I often perform contemporary music, whether it be pop songs with my a cappella group, Rock, Paper, Scissors, or music theater repertoire at Lexington High School concerts. Below are a few of my performances, as well as a resumé with further details.</p>
       </div>
     );
   }
@@ -61,6 +61,7 @@ class MusicContemporary extends React.Component {
             modifier: 1,
             slideShadows: true
           }}
+          grabCursor={"true"}
           preloadImages={"false"}>
 
           {

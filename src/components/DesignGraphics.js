@@ -1,5 +1,4 @@
 import React from "react"
-import tabStyles from "./Tab.module.css"
 import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
@@ -27,15 +26,13 @@ class MusicContemporary extends React.Component {
             modifier: 1,
             slideShadows: true
           }}
+          grabCursor={"true"}
           preloadImages={"false"}>
           {
             this.props.images.map((image) => (
               <SwiperSlide style={{
-                width: "60%",
                 height: "25%",
-                // backgroundColor: "#ededed",
                 borderRadius: "20px",
-                // boxShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.5)"
                 }} >
                 <ImageSlide image={image} />
               </SwiperSlide>
