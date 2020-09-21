@@ -1,5 +1,4 @@
 import React from "react"
-import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -7,9 +6,9 @@ import ImageSlide from "./ImageSlide"
 
 class MusicContemporary extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   images() {
     return (

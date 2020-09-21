@@ -1,6 +1,5 @@
 import React from "react"
 import tabStyles from "./Tab.module.css"
-import SwiperCore, { Pagination, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
@@ -34,10 +33,6 @@ const resume = [{
 
 ]
 class MusicContemporary extends React.Component {
-
-  constructor(props) {
-    super(props)
-  }
 
   description() {
     return (

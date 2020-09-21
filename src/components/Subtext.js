@@ -2,10 +2,6 @@ import React from "react"
 import tabStyles from "./Tab.module.css"
 
 class SubText extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render(){
         return(
             <div>

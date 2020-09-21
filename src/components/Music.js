@@ -1,6 +1,5 @@
 import React from "react"
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Redirect,
@@ -10,7 +9,6 @@ import MusicOriginal from "./MusicOriginal"
 import MusicContemporary from "./MusicContemporary"
 import MusicChoir from "./MusicChoir"
 import styles from "./Tab.module.css"
-import musicStyles from "./Music.module.css"
 import homeMP3 from "../audio/home.mp3"
 import dreamingMP3 from "../audio/dreamingaboutyou.mp3"
 import chevalierMP3 from "../audio/chevalier.mp3"

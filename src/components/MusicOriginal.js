@@ -79,7 +79,7 @@ class MusicOriginal extends React.Component {
               this.props.songs.map((song, index) => (
                 <SwiperSlide className={styles['swiper-slide']}>
                   <div className="player">
-                    <img src={song["cover_art_url"]} className="album-art" />
+                    <img src={song["cover_art_url"]} className="album-art" alt={song["name"]}/>
                     <div className="meta-container">
                       <div className="song-title">{song["name"]}</div>
                       <div className="song-artist">{song["artist"]}</div>

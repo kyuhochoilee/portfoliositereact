@@ -1,11 +1,7 @@
 import React from "react"
 import {
     BrowserRouter as 
-    Link,
-    NavLink,
-    Router,
-    Route,
-    Switch,
+    NavLink
 } from "react-router-dom";
 import styles from './Bar.module.css'
 import Logo from "../img/longlogo.png"
