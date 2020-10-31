@@ -59,6 +59,16 @@ const myContemp = [{
     "desc": "In light of the pandemic, I organized, soloed, mixed, mastered, and edited a virtual performance for my a cappella group.",
     "url": "https://www.youtube.com/embed/grTHxYK9Gx8?start=15",
 },
+
+{
+    "name": "We All Belong",
+    "about": "Original Composition",
+    "who": "Lexington High School Rock, Paper, Scissors",
+    "where": "",
+    "desc": "A virtual performance by my a cappella group of “We All Belong”, an anthem for the Lexington Public Schools system commissioned by the School Committee.",
+    "url": "https://www.youtube.com/embed/y0btQeU2TMk"
+},
+
 {
     "name": "First Date/Last Night",
     "about": "Dogfight",
@@ -66,7 +76,7 @@ const myContemp = [{
     "where": "Lexington High School Follies, February 2019",
     "desc": "A live duet performance at LHS of a musical theater piece.",
     "url": "https://www.youtube.com/embed/gtoN23AUf7A",
-}
+},
 
 ]
 
@@ -79,13 +89,22 @@ const myChoir = [{
     "url": "https://www.youtube.com/embed/ZeGc01ZxqfU",
 },
 {
+    "name": "The Star-Spangled Banner",
+    "who": "Lexington High School Madrigal Singes",
+    "where": "Lexington High School Virtual Graduation 2020",
+    "desc": "I edited, mixed, and mastered a virtual performance of the National Anthem played in the beginning of LHS's virtual graduation.",
+    "url":"https://www.youtube.com/embed/clhmVRKhv_k",
+},
+{
     "name": "Sügismaastikud: Kanarbik",
     "about": "Veljo Tormis",
     "who": "Lexington High School Madrigal Singers",
     "where": "Carnegie Hall, January 2019",
     "desc": "Our ensemble was given the incredible honor of performing at Carnegie Hall.",
     "url": "https://www.youtube.com/embed/bRdJC6CuXGY",
-}
+},
+
+
 
 ]
 
