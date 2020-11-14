@@ -90,7 +90,7 @@ const myChoir = [{
 },
 {
     "name": "The Star-Spangled Banner",
-    "who": "Lexington High School Madrigal Singes",
+    "who": "Lexington High School Madrigal Singers",
     "where": "Lexington High School Virtual Graduation 2020",
     "desc": "I edited, mixed, and mastered a virtual performance of the National Anthem played in the beginning of LHS's virtual graduation.",
     "url":"https://www.youtube.com/embed/clhmVRKhv_k",
