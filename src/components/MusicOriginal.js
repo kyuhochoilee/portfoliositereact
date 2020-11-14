@@ -13,7 +13,12 @@ import Resume from "./Resume"
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-const resume = [{
+const resume = [
+{
+  "title": "Wrote, produced, and performed “Give Us a Hand”, a song about climate change awareness that won 2nd place (Silver Award) in the international 2020 Bow Seat Ocean Awareness Contest.",
+  "extra": []
+},
+{
   "title": "Created and taught 'Introduction to Music Production', a masterclass for other members of the Lexington High School music program during quarantine. Over 50 people took part, learning the basics of music theory, composition, arrangement, recording, and mixing in GarageBand.",
   "extra": []
 },
@@ -21,10 +26,7 @@ const resume = [{
   "title": "Composed and produced a virtual performance by my a cappella group of “We All Belong”, an anthem for the Lexington Public Schools system commissioned by the School Committee.",
   "extra": []
 },
-{
-  "title": "Wrote, produced, and performed “Give Us a Hand”, a song about climate change awareness for the 2020 Bow Seat Ocean Awareness Contest.",
-  "extra": []
-},
+
 {
   "title": "Performed an original song at Lex Vegas, an event that I helped build from scratch as part of the LHS Class of 2021 Class Council that increased our fundraising revenue from $0 to $1500.",
   "extra": []
