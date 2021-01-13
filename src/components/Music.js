@@ -61,6 +61,16 @@ const myContemp = [{
 },
 
 {
+    "name": "That's Christmas To Me",
+    "about": "Pentatonix",
+    "who": "Lexington High School Rock, Paper, Scissors",
+    "where": "",
+    "desc": "A virtual performance played at LHS's Getaway concert, which was viewed live by over 500 people.",
+    "url": "https://www.youtube.com/embed/exEi8B3sesI",
+},
+
+
+{
     "name": "We All Belong",
     "about": "Original Composition",
     "who": "Lexington High School Rock, Paper, Scissors",
